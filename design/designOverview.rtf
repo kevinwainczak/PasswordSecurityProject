@@ -1,0 +1,34 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1344\cocoasubrtf720
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww12600\viewh13460\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs24 \cf0 Kevin Wainczak\
+15-112 Term Project Design Overview\
+\
+	My project is a Password Security Program. There are three main parts to my program that will be explained. The three parts are Data Collection, Data Analysis, and Data Visualization.\
+
+\b \
+Data Collection:
+\b0 \
+\
+What is being done here is that data is being collected about the password that the user is entering. In the case that the user is new, a completely new .csv file will be created under their name. In a real world situation, it would be their unique username. In the case that the user is existing, it will get their previously collected data, reformat it, and add on to the .csv file with the new data. This is done using the csv module, which comes with Python, so there is no need to download any additional modules. The user should be prepared for the program to create new files in the same folder as the program, and any user should have a .gif file saved under the format \'93yourName.gif\'94 in the same folder as the program. \
+\
+The user interface is clear and easy to use. I have easy to read text, a background that does not make it hard to see the text, and simple buttons that have clear functions. I wanted it to look semi-official, and definitely got an easy to use interface.\
+\
+
+\b Data Analysis:
+\b0 \
+\
+A k-Nearest Neighbor and chi Squared algorithm is being run on the data collected in the last program. No additional modules or programs are required to run this, as it uses Tkinter and csv. A user inputs a password, and the key down and key up times are measured. Then other times are calculated based on those values. The chi squared algorithm goes through each input time collected by every profiled user and looks for the closest time by subtracting the input time from the profiled time, squaring that value, and dividing by the profiled time. It adds up the value for each data point, and whichever trial has the lowest value is the user the program identifies.\
+\
+For k-Nearest Neighbor, we reformat all the data lists to create lists of data for each point we are looking at, and each time is attached to a person. We go to the input value and look at the k values to the left and the k values to the right and take the k nearest values to it. Whichever value for that person is closes, we take 1 and divide it by that value, then add it to a dictionary corresponding to that person. Whoever has the highest value attached to their dictionary name gets selected by the program as the identified user. We use the k-Nearest Neighbor algorithm, and use the chi-squared algorithm to break ties.\
+\
+The user interface has a picture of a vault on the back, and has rectangles behind the text so that it is easy to read. There are simple instructions to follow, and the functionality of typing the text is the same as in the data collection.\
+\
+
+\b Data Visualization:
+\b0 \
+\
+First, we make buttons for all of the profiled users, and we click on one of them to see their data. The graph shows not exact time points, yet, the pattern in which it is typed. There are filled circles for key down times, and non-filled circles for key up times. If you click on a circle, then all those data points align at that circle\'92s x-value, to reset the points, the user presses up or down. The user can press up and down to display more or less data points as well. To go back to the home screen, the user can press b. When I spoke to Professor Maxion, who did research into this area, he said that this function is what he preferred to use in his lab, and at current time, was not able to align data points and would like to be able to. This part uses Object Oriented Programming to visualize the data.}
